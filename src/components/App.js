@@ -1,42 +1,42 @@
-import React, {useEffect, useState} from "react";
-import AppRouter from "components/Router";
-import {authService} from "fbase";
+import React, { useEffect, useState } from 'react'
+import AppRouter from 'components/Router'
+import { authService } from 'fbase'
 
 function App() {
-    const [init, setInit] = useState(false);
-    const [userObj, setUserObj] = useState(null);
+  const [init, setInit] = useState(false)
+  const [userObj, setUserObj] = useState(null)
 
-    useEffect(() => {
-        authService.onAuthStateChanged((user) => {
-            if (user) {
-                setUserObj(user)
-                /*setUserObj({
-                    displayName: user.displayName,
-                    uid: user.uid,
-                    updateProfile: (args) => user.updateProfile(args)
-                })*/
-            } else {
-                setUserObj(null)
-            }
-            setInit(true);
-        })
-    })
-
-    const refreshUser = () => {
-        const user = authService.currentUser;
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if (user) {
         setUserObj(user)
         /*setUserObj({
-            displayName: user.displayName,
-            uid: user.uid,
-            updateProfile: (args) => user.updateProfile(args)
-        })*/
-    }
+         displayName: user.displayName,
+         uid: user.uid,
+         updateProfile: (args) => user.updateProfile(args)
+         })*/
+      } else {
+        setUserObj(null)
+      }
+      setInit(true)
+    })
+  })
 
-    return (
-        <div>
-            {init ? <AppRouter refreshUser={refreshUser} isLoggedIn={Boolean(userObj)} userObj={userObj}/> : "Initializing..."}
-        </div>
-    );
+  const refreshUser = () => {
+    const user = authService.currentUser
+    setUserObj(user)
+    /*setUserObj({
+     displayName: user.displayName,
+     uid: user.uid,
+     updateProfile: (args) => user.updateProfile(args)
+     })*/
+  }
+
+  return (
+    <div>
+      { init ? <AppRouter refreshUser={ refreshUser } isLoggedIn={ Boolean(userObj) } userObj={ userObj } /> : 'Initializing...' }
+    </div>
+  )
 }
 
-export default App;
+export default App
