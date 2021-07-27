@@ -1,7 +1,7 @@
 import React from 'react'
-import { firebaseInstance } from '../fbase'
+import { firebaseInstance } from 'fbase'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import AuthForm from '../components/AuthForm'
+import AuthForm from 'components/AuthForm'
 import { faGithub, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Auth = () => {

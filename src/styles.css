@@ -4,16 +4,69 @@ body {
   background-color: black;
 }
 
+button {
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
+
+.formInput {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.formBtn {
+  cursor: pointer;
+  padding: 7px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background-color: #04AAFF;
+}
+
+.cancelBtn {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+/* Profile Page */
+.profileForm {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  padding-bottom: 30px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileForm input:nth-child(2) {
+  margin-top: 10px;
+}
+
+.logOut {
+  width: 300px;
+  margin-top: 50px;
+}
+
 /* Nwitter Factory */
 .factoryForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 320px;
 }
 
@@ -60,6 +113,76 @@ body {
   font-size: 12px;
 }
 
+.factoryForm__attachment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.factoryForm__attachment img {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.factoryForm__clear {
+  color: #04AAFF;
+  cursor: pointer;
+  text-align: center;
+}
+
+.factoryForm__clear span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Nweet */
+.nweetEdit .formBtn {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.nweet {
+  margin-bottom: 20px;
+  background-color: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.nweet h4 {
+  font-size: 14px;
+}
+
+.nweet img {
+  right: -10px;
+  top: 20px;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.nweet__actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.nweet__actions span {
+  cursor: pointer;
+}
+
+.nweet__actions span:first-child {
+  margin-right: 10px;
+}
+
 /* Auth */
 .authContainer {
   background-color: black;
@@ -87,7 +210,6 @@ body {
 }
 
 /* AuthForm */
-
 .authInput {
   max-width: 320px;
   width: 100%;

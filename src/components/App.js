@@ -10,11 +10,6 @@ function App() {
     authService.onAuthStateChanged((user) => {
       if (user) {
         setUserObj(user)
-        /*setUserObj({
-         displayName: user.displayName,
-         uid: user.uid,
-         updateProfile: (args) => user.updateProfile(args)
-         })*/
       } else {
         setUserObj(null)
       }
@@ -25,11 +20,6 @@ function App() {
   const refreshUser = () => {
     const user = authService.currentUser
     setUserObj(user)
-    /*setUserObj({
-     displayName: user.displayName,
-     uid: user.uid,
-     updateProfile: (args) => user.updateProfile(args)
-     })*/
   }
 
   return (
