@@ -18,12 +18,12 @@ const Auth = () => {
   }
 
   return (
-    <div className="authContainer">
+    <div style={ {height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'} }>
       <FontAwesomeIcon icon={ faTwitter } color={ '#04AAFF' } size="3x" style={ {marginBottom: '30px'} } />
       <AuthForm />
-      <div className="authBtns">
-        <button className="authBtn" onClick={ onSocialClick } name="google">Continue with Google <FontAwesomeIcon icon={ faGoogle } /></button>
-        <button className="authBtn" onClick={ onSocialClick } name="github">Continue with Github <FontAwesomeIcon icon={ faGithub } /></button>
+      <div style={ {width: '320px', display: 'flex', justifyContent: 'space-between'} }>
+        <button className="bg-white rounded-full text-xs py-2 px-2" onClick={ onSocialClick } name="google">Continue with Google <FontAwesomeIcon icon={ faGoogle } /></button>
+        <button className="bg-white rounded-full text-xs py-2 px-2" onClick={ onSocialClick } name="github">Continue with Github <FontAwesomeIcon icon={ faGithub } /></button>
       </div>
     </div>
   )

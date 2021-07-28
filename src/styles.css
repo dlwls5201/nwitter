@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(232, 232, 232);
 }
 
 button {
@@ -181,32 +181,6 @@ a {
 
 .nweet__actions span:first-child {
   margin-right: 10px;
-}
-
-/* Auth */
-.authContainer {
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-}
-
-.authBtns {
-  width: 320px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.authBtn {
-  cursor: pointer;
-  border-radius: 20px;
-  border: none;
-  padding: 10px 0px;
-  font-size: 12px;
-  width: 150px;
-  background: white;
 }
 
 /* AuthForm */
