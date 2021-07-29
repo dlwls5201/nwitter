@@ -1,0 +1,38 @@
+.authInput {
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.authSubmit {
+  text-align: center;
+  background: var(--android-color);
+  color: black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.authError {
+  color: tomato;
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.authSwitch {
+  color: var(--android-color);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  text-decoration: underline;
+  display: block;
+}

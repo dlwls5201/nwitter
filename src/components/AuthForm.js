@@ -45,7 +45,6 @@ const AuthForm = () => {
                 { newAccount ? 'Sign In' : 'Create Account' }
       </span>
     </>
-
   )
 }
 

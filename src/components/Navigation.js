@@ -1,24 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = ({userObj}) => {
   return (
     <nav>
-      <ul style={ {display: 'flex', justifyContent: 'center', marginTop: '50px', marginBottom: '30px'} }>
+      <ul style={ {background: 'white', display: 'flex', justifyContent: 'center', paddingTop: '30px', paddingBottom: '10px', marginBottom: '0px'} }>
         <li>
-          <Link to="/" style={ {marginRight: '10px'} }>
-            <FontAwesomeIcon icon={ faTwitter } color={ '#04AAFF' } size='2x' />
+          <Link to="/"
+                style={ {marginRight: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: '12px'} }
+          >
+            <FontAwesomeIcon icon={ faHome } color={ 'var(--navigation-color)' } size='2x' />
+            <span style={ {marginTop: '10px', color: 'var(--navigation-color)'} }>Home</span>
           </Link>
         </li>
         <li>
           <Link to="/profile"
                 style={ {marginLeft: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: '12px'} }
           >
-            <FontAwesomeIcon icon={ faUser } color={ '#04AAFF' } size='2x' />
-            <span style={ {marginTop: '10px', color: '#04AAFF'} }>
+            <FontAwesomeIcon icon={ faUser } color={ 'var(--navigation-color)' } size='2x' />
+            <span style={ {marginTop: '10px', color: 'var(--navigation-color)'} }>
                 { userObj.displayName ? `${ userObj.displayName }의 Profile` : 'Profile' }
             </span>
           </Link>
