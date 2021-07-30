@@ -19,7 +19,7 @@ const Home = ({userObj}) => {
   return (
     <div style={ {marginTop: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center'} }>
       <NweetFactory userObj={ userObj } />
-      <div style={ {width: '500px', marginTop: '30px'} }>
+      <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100vw', marginTop: '30px'} }>
         { nweets.map((nweet) => (
           <Nweet
             key={ nweet.id }

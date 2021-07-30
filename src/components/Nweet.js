@@ -33,25 +33,36 @@ const Nweet = ({nweetObj, isOwner}) => {
   return (
     <div className='nweet'>
       { editing ? (
-        <>
-          <form onSubmit={ onNweetSubmit } className='container nweetEdit'>
+        <div>
+          <h1 className={ 'text-center text-lg font-bold' }>Modify</h1>
+          <form style={ {position: 'relative'} } className={ 'mt-5 mb-8' } onSubmit={ onNweetSubmit }>
             <input
+              style={ {width: '100%'} }
+              className={ 'formInput mb-5 mr-5' }
               type="text"
               placeholder="Edit your nweet"
               value={ newNweet }
               required
               onChange={ onNweetChange }
             />
-            <input type="submit" value="Update Nweet" className='formBtn' />
+            <div style={ {position: 'absolute', right: '0'} }>
+              <button
+                className={ 'cancelBtn mr-3' }
+                onClick={ toggleEditing }>Cancel
+              </button>
+              <input
+                className={ 'myBlueBtn' }
+                type="submit"
+                value="Update Nweet" />
+            </div>
           </form>
-          <button onClick={ toggleEditing } className='formBtn cancelBtn'>Cancel</button>
-        </>
+        </div>
       ) : (
-          <>
-            <h4>{ nweetObj.text }</h4>
+          <div style={ {display: 'flex', flexDirection: 'row', alignItems: 'center'} }>
             { nweetObj.attachmentUrl && (
-              <img src={ nweetObj.attachmentUrl } width="50px" height="50px" />
+              <img className={ 'rounded-full mr-5 w-12' } src={ nweetObj.attachmentUrl } />
             ) }
+            <h4 className='pr-10'>{ nweetObj.text }</h4>
             { isOwner && (
               <div className='nweet__actions'>
                 <span onClick={ onDeleteClick }>
@@ -62,7 +73,7 @@ const Nweet = ({nweetObj, isOwner}) => {
                 </span>
               </div>
             ) }
-          </>
+          </div>
         ) }
     </div>
   )

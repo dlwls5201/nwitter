@@ -19,9 +19,7 @@ const Profile = ({refreshUser, userObj}) => {
   const onSubmit = async (event) => {
     event.preventDefault()
     if (userObj.displayName !== newDisplayName) {
-      await userObj.updateProfile({
-                                    displayName: newDisplayName
-                                  })
+      await userObj.updateProfile({displayName: newDisplayName})
       refreshUser()
     }
   }
@@ -36,16 +34,16 @@ const Profile = ({refreshUser, userObj}) => {
   }
 
   useEffect(() => {
-    getMyNweets()
+    //getMyNweets()
   }, [])
 
   return (
-    <div className='container'>
+    <div className='profileContainer'>
       <form onSubmit={ onSubmit } className='profileForm'>
         <input className='formInput' onChange={ onChange } type="text" placeholder="Display name" value={ newDisplayName } autoFocus />
-        <input className='formBtn' type="submit" value="Update Profile" />
+        <input className='myBlueBtn' type="submit" value="Update Profile" />
       </form>
-      <span className='formBtn cancelBtn logOut' onClick={ onLogOutClick }>Log Out</span>
+      <span className='mt-10 cancelBtn' onClick={ onLogOutClick }>Log Out</span>
     </div>
   )
 }
