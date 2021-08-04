@@ -6,6 +6,7 @@
 @import "components/css/nwitter.css";
 @import "components/css/profile_form.css";
 @import "components/css/loading.css";
+@import "components/css/table.css";
 
 body {
   margin: 0;

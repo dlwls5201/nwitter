@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAtom, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = ({userObj}) => {
   return (
@@ -17,12 +17,20 @@ const Navigation = ({userObj}) => {
         </li>
         <li>
           <Link to="/profile"
-                style={ {marginLeft: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: '12px'} }
+                style={ {marginRight: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: '12px'} }
           >
             <FontAwesomeIcon icon={ faUser } color={ 'var(--navigation-color)' } size='2x' />
             <span style={ {marginTop: '10px', color: 'var(--navigation-color)'} }>
                 { userObj.displayName ? `${ userObj.displayName }의 Profile` : 'Profile' }
             </span>
+          </Link>
+        </li>
+        <li>
+          <Link to='/test'
+                style={ {display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: '12px'} }
+          >
+            <FontAwesomeIcon icon={ faAtom } color={ 'var(--navigation-color)' } size='2x' />
+            <span style={ {marginTop: '10px', color: 'var(--navigation-color)'} }>Test</span>
           </Link>
         </li>
       </ul>
